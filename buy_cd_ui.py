@@ -6,7 +6,7 @@ class main_ui(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Python零股滿額配置小幫手(教學範例)")
+        self.setWindowTitle("Python投資組合分時分量小幫手(教學範例)")
         self.resize(1200, 700)
 
         # 製作上下排列layout上為庫存表，下為log資訊
