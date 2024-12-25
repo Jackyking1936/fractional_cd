@@ -13,7 +13,7 @@ from datetime import datetime, timedelta
 from threading import Timer
 
 from PySide6.QtWidgets import QTableWidgetItem, QFileDialog, QApplication, QWidget, QVBoxLayout, QHBoxLayout, QTableWidget, QGridLayout, QLabel, QLineEdit, QPushButton, QSizePolicy, QPlainTextEdit
-from PySide6.QtGui import QIcon, QTextCursor
+from PySide6.QtGui import QIcon, QTextCursor, QFont
 from PySide6.QtCore import Qt, Signal, QObject
 
 # 仿FilledData的物件
@@ -1045,7 +1045,8 @@ if __name__ == "__main__":
     else:
         app = QApplication.instance()
 
-    app.setStyleSheet("QWidget{font-size: 12pt;}")
+    font = QFont("Microsoft JhengHei", 12)  # 字體名稱和大小
+    app.setFont(font)
     form = login_handler(sdk, MainApp, 'fraction.png')
     form.show()
     
